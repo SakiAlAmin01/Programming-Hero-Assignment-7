@@ -1,5 +1,4 @@
-{
-  "friends": [
+ [
     {
       "id": 1,
       "name": "David Kim",
@@ -97,4 +96,3 @@
       "next_due_date": "2026-02-28"
     }
   ]
-}

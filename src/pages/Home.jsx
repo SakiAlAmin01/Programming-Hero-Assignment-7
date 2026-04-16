@@ -6,15 +6,15 @@ export default function Home() {
   const [friends, setFriends] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch("/friends.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data); // debug check
-        setFriends(data);
-        setLoading(false);
-      });
-  }, []);
+ useEffect(() => {
+  fetch("/friends.json")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data); // should be array
+      setFriends(data);
+      setLoading(false);
+    });
+}, []);
 
   if (loading) return <Loader />;
 
