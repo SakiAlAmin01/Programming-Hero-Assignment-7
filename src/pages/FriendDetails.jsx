@@ -9,7 +9,7 @@ const FriendDetails = () => {
   const { addEntry } = useTimeline();
 
   useEffect(() => {
-    fetch("/src/data/friends.json")
+    fetch("/friends.json")
       .then(res => res.json())
       .then(data => {
         const found = data.find(f => f.id == id);
