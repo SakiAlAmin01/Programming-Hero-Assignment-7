@@ -7,9 +7,10 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/src/data/friends.json")
+    fetch("/friends.json")
       .then((res) => res.json())
       .then((data) => {
+        console.log(data); // debug check
         setFriends(data);
         setLoading(false);
       });
@@ -28,9 +29,10 @@ export default function Home() {
       </button>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-        {friends.map((friend) => (
-          <FriendCard key={friend.id} friend={friend} />
-        ))}
+        {Array.isArray(friends) &&
+          friends.map((friend) => (
+            <FriendCard key={friend.id} friend={friend} />
+          ))}
       </div>
     </div>
   );
