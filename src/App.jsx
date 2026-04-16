@@ -1,12 +1,8 @@
-import Navbar from "./components/Navbar";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/Router";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <h1 className="text-center mt-10">Hello KeenKeeper 🚀</h1>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
