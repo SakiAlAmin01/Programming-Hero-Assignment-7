@@ -20,7 +20,7 @@ const Navbar = () => {
       {/* Links */}
       <div className="flex items-center gap-4">
         <NavLink to="/" className={linkStyle}>
-          <Home size={16} /> Home
+          <Home size={16} /> Dashboard
         </NavLink>
 
         <NavLink to="/timeline" className={linkStyle}>
