@@ -1,10 +1,10 @@
-import { createHashRouter } from "react-router-dom"; // ✅ changed
+import { createHashRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/Home.jsx";
-import Timeline from "../pages/Timeline.jsx";
-import Stats from "../pages/Stats.jsx";
-import FriendDetails from "../pages/FriendDetails.jsx";
-import NotFound from "../pages/NotFound.jsx";
+import Home from "../pages/Home";
+import Timeline from "../pages/Timeline";
+import Stats from "../pages/Stats";
+import FriendDetails from "../pages/FriendDetails";
+import NotFound from "../pages/NotFound";
 
 const router = createHashRouter([
   {
@@ -12,10 +12,10 @@ const router = createHashRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/timeline", element: <Timeline /> },
-      { path: "/stats", element: <Stats /> },
-      { path: "/friend/:id", element: <FriendDetails /> },
+      { index: true, element: <Home /> }, // Use index instead of path: "/"
+      { path: "timeline", element: <Timeline /> }, // Remove leading slash
+      { path: "stats", element: <Stats /> },
+      { path: "friend/:id", element: <FriendDetails /> },
     ],
   },
 ]);

@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
   return {
     plugins: [react()],
     base:
-      command === "build"
+      mode === "production"
         ? "/Programming-Hero-Assignment-7/"
-        : "/", // dev এ normal, build এ GitHub path
+        : "/",
   };
 });
