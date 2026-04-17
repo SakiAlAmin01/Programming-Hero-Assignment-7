@@ -10,14 +10,14 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  fetch('/Programming-Hero-Assignment-7/friends.json')
-    .then(res => res.json())
-    .then(data => {
+  fetch(`${import.meta.env.BASE_URL}friends.json`)
+    .then((res) => res.json())
+    .then((data) => {
       setFriends(data);
       setLoading(false);
     })
-    .catch(err => {
-      console.error(err);
+    .catch((error) => {
+      console.error(error);
       setLoading(false);
     });
 }, []);
