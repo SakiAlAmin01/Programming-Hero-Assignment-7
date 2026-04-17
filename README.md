@@ -26,19 +26,19 @@
 
 ### 🏠 Dashboard
 
-![Dashboard](https://prnt.sc/GhZvyI8RT-md)
+![Dashboard](./public/Dashboard.png)
 
 ### 📊 Analytics
 
-![Analytics](https://prnt.sc/7vWsYsdjJkxT)
+![Analytics](./public/Analytics.png)
 
 ### ⏱️ Timeline
 
-![Timeline](https://prnt.sc/NR4QcGFAHk78)
+![Timeline](./public/Timeline.png)
 
 ### ⏱️ FrinedsDetails
 
-![FrinedsDetails](https://prnt.sc/_XGEhCNQraVO)
+![FrinedsDetails](./public/FriendsDetails.png)
 
 ---
 
