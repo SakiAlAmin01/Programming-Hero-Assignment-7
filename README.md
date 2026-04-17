@@ -90,7 +90,7 @@ It keeps track of your interactions and ensures you stay connected with the peop
 ## ⚙️ Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/keen-keeper.git
+git clone https://github.com/SakiAlAmin01/Programming-Hero-Assignment-7.git
 cd keen-keeper
 npm install
 npm run dev
