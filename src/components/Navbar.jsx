@@ -14,7 +14,7 @@ const Navbar = () => {
       
       {/* Logo */}
       <h1 className="text-xl font-bold text-gray-800">
-        <span className="text-green-700">Keen</span>Keeper
+        <span>Keen</span><span className="text-[#244D3F]">Keeper</span> 
       </h1>
 
       {/* Links */}
