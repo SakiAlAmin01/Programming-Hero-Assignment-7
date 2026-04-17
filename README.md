@@ -1,16 +1,120 @@
-# React + Vite
+# 🌿 KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <b>Your personal relationship management dashboard</b><br/>
+  Track interactions, stay connected, and never lose touch again.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-blue?logo=react" />
+  <img src="https://img.shields.io/badge/Vite-fast-yellow?logo=vite" />
+  <img src="https://img.shields.io/badge/TailwindCSS-utility--first-38bdf8?logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Recharts-charts-green" />
+  <img src="https://img.shields.io/badge/Responsive-Yes-success" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 **[Visit KeenKeeper](https://your-live-link.vercel.app)**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 📸 Screenshots
+
+### 🏠 Dashboard
+
+![Dashboard](https://prnt.sc/GhZvyI8RT-md)
+
+### 📊 Analytics
+
+![Analytics](https://prnt.sc/7vWsYsdjJkxT)
+
+### ⏱️ Timeline
+
+![Timeline](https://prnt.sc/NR4QcGFAHk78)
+
+### ⏱️ FrinedsDetails
+
+![FrinedsDetails](https://prnt.sc/_XGEhCNQraVO)
+
+---
+
+## 🧠 About the Project
+
+KeenKeeper is a modern web app designed to help you maintain meaningful relationships.
+It keeps track of your interactions and ensures you stay connected with the people who matter most.
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ **React (Vite)**
+* 🎨 **Tailwind CSS**
+* 📊 **Recharts**
+* 🔥 **React Hot Toast**
+* 🧭 **React Router DOM**
+* 🧠 **Context API**
+
+---
+
+## ✨ Features
+
+### 📇 Friend Management
+
+* Add and manage friends
+* View profile, tags, and details
+* Track last interaction status
+
+### 📊 Smart Analytics
+
+* Dynamic pie chart (Call / Text / Video)
+* Auto updates when new interactions added
+
+### ⏱️ Timeline Tracking
+
+* Log interactions easily
+* Filter by type (Call, Text, Video)
+* Clean and minimal UI
+
+### 📱 Fully Responsive
+
+* Mobile, Tablet, Desktop ready
+* Hamburger menu for small devices
+* Smooth UI experience
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+git clone https://github.com/your-username/keen-keeper.git
+cd keen-keeper
+npm install
+npm run dev
+```
+
+---
+
+## 📈 Future Improvements
+
+* 🔐 Authentication system
+* ☁️ Database integration (Firebase / MongoDB)
+* 🔔 Smart reminders & notifications
+* 📅 Calendar integration
+
+---
+
+## 👨‍💻 Author
+
+Developed with ❤️ by **Saki Al Amin**
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
