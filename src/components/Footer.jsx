@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom Section Ui */}
         <div className="border-t border-green-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300 gap-4">
 
           <p className="text-center md:text-left">
