@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 const FriendCard = ({ friend }) => {
   const { id, name, picture, days_since_contact, status, tags } = friend;
 
@@ -14,11 +16,12 @@ const FriendCard = ({ friend }) => {
     <Link to={`/friend/${id}`}>
       <div className="shadow p-4 rounded text-center">
         <img
-          src={picture}
-          className="w-16 h-16 rounded-full mx-auto"
+          src={picture.startsWith('http') ? picture : `${BASE_URL}${picture}`}
+          alt={name}
+          className="w-16 h-16 rounded-full mx-auto object-cover"
         />
         <h3 className="font-semibold mt-2">{name}</h3>
-        <p>{days_since_contact} days ago</p>
+        <p className="text-sm text-gray-500">{days_since_contact} days ago</p>
 
         <div className="flex justify-center gap-2 mt-2">
           {tags.map((tag, i) => (

@@ -12,8 +12,8 @@ const router = createHashRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
-      { index: true, element: <Home /> }, // Use index instead of path: "/"
-      { path: "timeline", element: <Timeline /> }, // Remove leading slash
+      { index: true, element: <Home /> },
+      { path: "timeline", element: <Timeline /> },
       { path: "stats", element: <Stats /> },
       { path: "friend/:id", element: <FriendDetails /> },
     ],
