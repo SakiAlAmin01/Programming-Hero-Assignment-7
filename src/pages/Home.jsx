@@ -2,15 +2,28 @@ import { useEffect, useState } from "react";
 import FriendCard from "../components/FriendCard";
 import Loader from "../components/Loader";
 
+// ✅ BASE_URL যোগ করুন
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 export default function Home() {
   const [friends, setFriends] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/friends.json")
-      .then((res) => res.json())
+    // ✅ BASE_URL সহ fetch করুন
+    fetch(`${import.meta.env.BASE_URL}friends.json`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
       .then((data) => {
         setFriends(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch friends.json:", error);
         setLoading(false);
       });
   }, []);
@@ -24,7 +37,6 @@ export default function Home() {
     f => f.status === "overdue" || f.status === "almost due"
   ).length;
 
-  // demo interactions (later timeline theke nite parba)
   const interactions = friends.reduce((acc, f) => acc + f.days_since_contact, 0);
 
   return (
@@ -44,7 +56,6 @@ export default function Home() {
         + Add a Friend
       </button>
 
-      {/* ✅ STATS SECTION (THIS WAS MISSING) */}
       <div className="grid md:grid-cols-4 gap-4 mt-8">
         <div className="bg-white shadow rounded p-4">
           <h2 className="text-2xl font-bold">{totalFriends}</h2>

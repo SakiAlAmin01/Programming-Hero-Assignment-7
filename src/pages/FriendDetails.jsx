@@ -12,7 +12,7 @@ const FriendDetails = () => {
   const { addEntry } = useTimeline();
 
   useEffect(() => {
-    fetch(`${BASE_URL}friends.json`)
+    fetch(`${import.meta.env.BASE_URL}friends.json`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to load friends data");
