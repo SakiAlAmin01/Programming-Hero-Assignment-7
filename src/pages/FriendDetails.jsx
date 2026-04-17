@@ -12,23 +12,17 @@ const FriendDetails = () => {
   const { addEntry } = useTimeline();
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}friends.json`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to load friends data");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        const found = data.find((f) => f.id == id);
-        setFriend(found);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error:", err);
-        setLoading(false);
-      });
-  }, [id, BASE_URL]); // ✅ IMPORTANT
+  fetch('./friends.json')
+    .then(res => res.json())
+    .then(data => {
+      setFriends(data); // or setFriend
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
 
   if (loading) {
     return <p className="p-6 text-center">Loading...</p>;

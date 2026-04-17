@@ -10,23 +10,17 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // ✅ BASE_URL সহ fetch করুন
-    fetch(`${import.meta.env.BASE_URL}friends.json`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setFriends(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Failed to fetch friends.json:", error);
-        setLoading(false);
-      });
-  }, []);
+  fetch('/Programming-Hero-Assignment-7/friends.json')
+    .then(res => res.json())
+    .then(data => {
+      setFriends(data);
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
 
   if (loading) return <Loader />;
 
