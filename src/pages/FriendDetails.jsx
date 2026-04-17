@@ -12,17 +12,18 @@ const FriendDetails = () => {
   const { addEntry } = useTimeline();
 
   useEffect(() => {
-  fetch('./friends.json')
-    .then(res => res.json())
-    .then(data => {
-      setFriends(data); // or setFriend
+  fetch(`${import.meta.env.BASE_URL}friends.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      const found = data.find((f) => Number(f.id) === Number(id));
+      setFriend(found);
       setLoading(false);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
       setLoading(false);
     });
-}, []);
+}, [id]);
 
   if (loading) {
     return <p className="p-6 text-center">Loading...</p>;
